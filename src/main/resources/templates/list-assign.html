@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr >
+			<th>Username</th>
+			<th>Score</th>
+			<th>Start</th>
+			<th>End</th>
+
+		</tr>
+		<tr th:each="a: ${list_assign}">
+			<td th:text="${current_user.username}"></td>
+			<td th:text="${a.score}"></td>
+			<td th:text="${a.start}"></td>
+			<td th:text="${a.end}"></td>
+
+
+		</tr>
+	</table>
+</body>
+</html>

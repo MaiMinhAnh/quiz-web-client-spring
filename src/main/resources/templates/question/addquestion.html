@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/question/add}" th:object="${question}" method="post" >
+	
+	<input th:field="*{question}" type="text" placeholder="question"/>
+	<input th:field="*{ans1}" type="text" placeholder="ans1"/>
+	<input th:field="*{ans2}" type="text" placeholder="ans2"/>
+	<input th:field="*{ans3}" type="text" placeholder="ans3"/>
+	<input th:field="*{ans4}" type="text" placeholder="ans4"/>
+	<input th:field="*{answer}" type="text" placeholder="answer"/>
+	
+	<input  type="submit" value="ADD"/>
+	
+</form>
+</body>
+</html>

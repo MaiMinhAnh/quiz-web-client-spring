@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3 th:text="${quiz.name}"></h3>
+	<form th:action="@{/quiz/submit}" method="post">
+		<table>
+			<tr th:each="q : ${list_ques}">
+				<td>
+					
+					<h4 th:text="${q.question}"></h4>
+					<input type="radio" th:name="${q.id_question}" value="1" th:text="${q.ans1}" />
+					<input type="radio" th:name="${q.id_question}" value="2" th:text="${q.ans2}" />
+					<input type="radio" th:name="${q.id_question}" value="3" th:text="${q.ans3}" />
+					<input type="radio" th:name="${q.id_question}" value="4" th:text="${q.ans4}" />
+					<br>
+					
+				</td>
+			</tr>
+			<tr>
+				<td><input id="submit-quiz" type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

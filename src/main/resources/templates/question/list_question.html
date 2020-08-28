@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Danh sách các câu hỏi</h1>
+<table >
+	<tr>
+		<th >ID</th>
+		<th >Question</th>
+		<th >Choice 1</th>
+		<th >Choice 2</th>
+		<th >Choice 3</th>
+		<th >Choice 4</th>
+		<th >Answer</th>
+	</tr>
+	<tr th:each = "q: ${questions}">
+		<td  th:text="${q.id_question}"></td>
+		<td  th:text="${q.question}"></td>
+		<td  th:text="${q.ans1}"></td>
+		<td  th:text="${q.ans2}"></td>
+		<td  th:text="${q.ans3}"></td>
+		<td  th:text="${q.ans4}"></td>
+		<td  th:text="${q.answer}"></td>
+		
+		<td ><a th:href="@{/question/{id_question}(id_question=${q.id_question})}" >Edit</a></td>
+<!-- 		<td ><a th:href="@{/question/delete/ques/{id_question}(id_question=${q.id_question})}" >Delete</a></td> -->
+	</tr>
+</table>
+<br>
+<br>
+<a th:href="@{/question/add}">Add question</a>
+<a th:href="@{/test-list}">Test List</a>
+
+</body>
+</html>

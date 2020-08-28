@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<link rel = "stylesheet" type="text/css" href="/static/css/table.css" >
+</head>
+<body>
+
+	<h1>Danh sách tài khoản người dùng</h1>
+	
+
+	<table >
+	<tr>
+		<th >ID</th>
+		<th >User name</th>
+		<th >Password</th>
+		<th>Role</th>
+	</tr>
+	<tr th:each = "u: ${users}">
+		<td  th:text="${u.id_user}" name="id_user"></td>
+		<td  th:text="${u.username}"></td>
+		<td  th:text="${u.password}"></td>
+		<td  th:text="${u.role_name}"></td>
+		
+		<td ><a th:href="@{/edit/{id_user}(id_user=${u.id_user})}" >Edit</a></td>
+		<td ><a th:href="@{/delete/{id_user}(id_user=${u.id_user})}" >Delete</a></td>
+	</tr>
+</table>
+
+<br>
+<br>
+<a th:href="@{/create}">Add user</a>
+
+<!-- <form th:action="@{/create}" th:object="${user}" method="post" > -->
+	
+<!-- 	<input th:field="*{username}" type="text" placeholder="username"/> -->
+<!-- 	<input th:field="*{password}" type="text" placeholder="password"/> -->
+<!-- 	<input th:field="*{role}" type="text" placeholder="1 or 2 or 3" /> -->
+<!-- 	<input  type="submit" value="ADD"/> -->
+	
+<!-- </form> -->
+
+
+</body>
+</html>

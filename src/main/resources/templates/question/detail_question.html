@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form th:action="@{/question/{id_ques}(id_ques=${update_ques.id_question})}" th:object="${update_ques}" method="post">
+	<table >
+	<tr>
+		<th>ID</th>
+		<td><input th:value="${update_ques.id_question}" type="text" name="id_question" /></td>				
+	</tr>
+		<th>Question</th>
+		<td><input th:value="${update_ques.question}" type="text" name="question" /></td>
+	<tr>
+	
+	</tr>
+		<th>Choice 1</th>
+		<td><input th:value="${update_ques.ans1}" type="text" name="ans1" /></td>
+	<tr>
+	</tr>
+		<th>Choice 2</th>
+		<td><input th:value="${update_ques.ans2}" type="text" name="ans2" /></td>
+	<tr>
+	</tr>
+		<th>Choice 3</th>
+		<td><input th:value="${update_ques.ans3}" type="text" name="ans3" /></td>
+	<tr>
+	</tr>
+		<th>Choice 4</th>
+		<td><input th:value="${update_ques.ans4}" type="text" name="ans4" /></td>
+	<tr>
+	</tr>
+		<th>Answer</th>
+		<td><input th:value="${update_ques.answer}" type="text" name="answer" /></td>
+	<tr>
+	
+	</tr>
+
+	<tr><td><input type="submit" value="Update"/></td></tr>
+</table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Score</th>
+			<th>Start</th>
+			<th>End</th>
+
+		</tr>
+		<tr>
+			<td th:text="${user.username}"></td>
+			<td th:text="${result.score}"></td>
+			<td th:text="${result.start}"></td>
+			<td th:text="${result.end}"></td>
+
+
+		</tr>
+	</table>
+	<a th:href="@{/assign/}">All quiz</a>
+</body>
+</html>

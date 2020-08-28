@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form th:action="@{/create}" th:object="${user}" method="post" >
+	
+	<input th:field="*{username}" type="text" placeholder="username"/>
+	<input  th:field="*{password}" type="text" placeholder="password"/>
+	<input th:field="*{role}" type="text" placeholder="1 or 2 or 3" />
+	<input  type="submit" value="ADD"/>
+	
+</form>
+</body>
+</html>

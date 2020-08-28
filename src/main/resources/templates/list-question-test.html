@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Question</th>
+			<th>Choice 1</th>
+			<th>Choice 2</th>
+			<th>Choice 3</th>
+			<th>Choice 4</th>
+			<th>Answer</th>
+		</tr>
+		<tr th:each="q: ${list_question}">
+			<td th:text="${q.id_question}"></td>
+			<td th:text="${q.question}"></td>
+			<td th:text="${q.ans1}"></td>
+			<td th:text="${q.ans2}"></td>
+			<td th:text="${q.ans3}"></td>
+			<td th:text="${q.ans4}"></td>
+			<td th:text="${q.answer}"></td>
+
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form th:action="@{/edit/{id_user}(id_user=${update_user.id_user})}" th:object="${update_user}" method="post">
+	<table >
+	<tr>
+		<th>ID</th>
+		<td><input th:value="${update_user.id_user}" type="text" name="id_user" /></td>				
+	</tr>
+		<th>User name</th>
+		<td><input th:value="${update_user.username}" type="text" name="username" /></td>
+	<tr>
+	
+	<tr>
+		<th>Password</th>
+		<td><input th:value="${update_user.password}" type="text" name="password"/></td>
+	</tr>
+	
+	</tr>
+	<tr >
+		<th>Role ID</th>
+		<td><input th:value="${update_user.role}" type="text" name="role" /></td>
+		
+		
+	</tr>
+	<tr><td><input type="submit" value="Update"/></td></tr>
+</table>
+</form>
+	
+
+</body>
+</html>

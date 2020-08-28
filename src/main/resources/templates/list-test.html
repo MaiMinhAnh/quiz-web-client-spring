@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>ID Test</th>
+			<th>Name</th>
+			<th>Assign</th>
+		</tr>
+		<tr th:each="t: ${tests}">
+			<td th:text="${t.id_test}"></td>
+			<td th:text="${t.name}"></td>
+			
+
+			<td><a th:href="@{/list_question/{id_test}(id_test=${t.id_test})}">List question</a></td>
+			<td><a th:href="@{/assign/{id_test}(id_test=${t.id_test})}">View assign</a></td>
+		</tr>
+	</table>
+</body>
+</html>
